@@ -7,10 +7,10 @@ function calcShipping(sum, min, shipping) {
 
     let shippingSum; // расчет стоимости доставки
     if (productsSum == 0) {
-        shippingSum == 0;
+        shippingSum = 0;
         //console.log ('Товар в корзине отсутствует - стоимость доставки 0 руб.');
     } else if (productsSum >= freeShippingMinSum) {
-        shippingSum == 0;
+        shippingSum = 0;
         //console.log ('Доставка бесплатная');
     } else if (productsSum > 0 && productsSum < freeShippingMinSum) {
         shippingSum = shippingPrice;
