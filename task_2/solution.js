@@ -43,7 +43,7 @@ function calcDiscount(sum, min, discount) {
 
     let = discountSum;// величина скидки в рублях
     if (productsSum >= discountMinSum) {
-        discountSum = productsSum / 100 * discountPart;
+        discountSum = discountPart / 100 * productsSum;
     } else {discountSum = 0;}
 
 
