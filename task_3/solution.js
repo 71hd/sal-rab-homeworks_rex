@@ -16,7 +16,7 @@ function renderCartItem(item) {
     itemCountText += product.price;
     itemCountText += ` ₽ = `;
     let sum = product.count * product.price;
-    itemCountText = itemCountText + sum;
+    itemCountText += sum;
     itemCountText += ` ₽`;
 
 
