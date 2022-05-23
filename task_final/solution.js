@@ -52,8 +52,6 @@
         goods: [...goodsArray],
     };
 
-    
-
 
     let jsonData = JSON.stringify({data});
 
