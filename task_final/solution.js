@@ -36,21 +36,21 @@
 function sendRequest(name, phone, address, goods, sum) {
 
     const {street, house, entrance, floor, flat} = address;
-
+const goodsArray = goods.map((good, index) => {
+    id: index,
+    title: good.title,
+    count: good.count,
+});
     let data = {
         client: `${name} ${phone}`, 
         order: {
             address:`ул. ${street}, дом ${house}, ${entrance} подъезд, ${floor} этаж, кв ${flat}`, 
             sum
         }, 
-        goods: [],
+        goods: [...goodsArray],
     };
 
-    let countOfGoods = goods.length;
-
-    for (let i = 0; i <= countOfGoods; i += 1) {
-        data.goods.push(goods[i]);
-    }
+    
 
 
     let jsonData = JSON.stringify({data});
