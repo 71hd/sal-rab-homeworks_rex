@@ -35,8 +35,8 @@
  function sendRequest(name, phone, address, goods, sum) {
 
     const {street, house, entrance, floor, flat} = address;
-const goodsArray = goods.map((good, index) => ({
-    id: index+1,
+const goodsArray = goods.map((good) => ({
+    id: good.id,
     title: good.title,
     count: good.count,
 }));
