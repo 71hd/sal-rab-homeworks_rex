@@ -35,6 +35,8 @@
 
 function sendRequest(name, phone, address, goods, sum) {
 
+    const {street, house, entrance, floor, flat} = address;
+
     let data = {
         client: `${name} ${phone}`, 
         order: {
