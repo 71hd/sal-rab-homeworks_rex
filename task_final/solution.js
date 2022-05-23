@@ -37,7 +37,10 @@
     const {street, house, entrance, floor, flat} = address;
     const goodsArray =[];
     for (let index = 0; index < goods.length; index++) {
-         goodsArray.push(goods[index]);
+         goodsArray.push({
+             title: goods[index].title,
+             count: goods[index].count,
+         })
     }
     
     let data = {
