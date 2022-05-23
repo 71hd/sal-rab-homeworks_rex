@@ -32,8 +32,7 @@
 //      ]
 //    }
 // }
-
-export function sendRequest(name, phone, address, goods, sum) {
+ function sendRequest(name, phone, address, goods, sum) {
 
     const {street, house, entrance, floor, flat} = address;
 const goodsArray = goods.map((good, index) => ({
