@@ -35,11 +35,11 @@
  function sendRequest(name, phone, address, goods, sum) {
 
     const {street, house, entrance, floor, flat} = address;
-const goodsArray = goods.map((good) => ({
+    const goodsArray =[];
+    for (let index = 0; index < goods.length; index++) {
+         goodsArray.push(goods[index]);
+    }
     
-    title: good.title,
-    count: good.count,
-}));
     let data = {
         client: `${name} ${phone}`, 
         order: {
