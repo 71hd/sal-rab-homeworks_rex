@@ -33,14 +33,14 @@
 //    }
 // }
 
-function sendRequest(name, phone, address, goods, sum) {
+export function sendRequest(name, phone, address, goods, sum) {
 
     const {street, house, entrance, floor, flat} = address;
-const goodsArray = goods.map((good, index) => {
+const goodsArray = goods.map((good, index) => ({
     id: index,
     title: good.title,
     count: good.count,
-});
+}));
     let data = {
         client: `${name} ${phone}`, 
         order: {
